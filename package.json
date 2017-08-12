@@ -1,11 +1,11 @@
 {
-  "name": "profile-jon-alexander",
+  "name": "quick-app-gen",
   "version": "1.0.0",
-  "description": "profile",
+  "description": "lw web app bp",
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "webpack-dev-server --open" 
+    "start": "webpack-dev-server --open"
   },
   "keywords": [
     "profile",
@@ -19,6 +19,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
+    "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
   }
