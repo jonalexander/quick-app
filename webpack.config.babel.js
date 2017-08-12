@@ -1,5 +1,7 @@
-import webpack from 'webpack';
-import path from 'path';
+import webpack from 'webpack'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import HtmlWebpackExternalsPlugin from 'html-webpack-externals-plugin'
 
 module.exports = {
 
@@ -22,7 +24,19 @@ module.exports = {
    },
 
    plugins: [
-      new webpack.HotModuleReplacementPlugin() // Enable HMR
+      new webpack.HotModuleReplacementPlugin(), // Enable HMR
+      new HtmlWebpackPlugin({
+      title: 'quick'
+    }),
+     new HtmlWebpackExternalsPlugin({
+       externals: [
+          {
+            module: 'jquery',
+            entry: 'dist/jquery.min.js',
+            global: 'jQuery',
+          }
+        ]
+     })
    ],
 
   module: {
@@ -44,4 +58,3 @@ module.exports = {
 
   }
 };
-
