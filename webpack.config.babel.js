@@ -24,10 +24,10 @@ module.exports = {
    },
 
    plugins: [
-      new webpack.HotModuleReplacementPlugin(), // Enable HMR
-      new HtmlWebpackPlugin({
+
+    new webpack.HotModuleReplacementPlugin(), // Enable HMR
+    new HtmlWebpackPlugin({
       title: 'quick',
-      hash: true,
       template: './src/index.html'
     }),
      new HtmlWebpackExternalsPlugin({

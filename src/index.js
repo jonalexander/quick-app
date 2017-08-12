@@ -2,5 +2,6 @@ import jQuery from 'jQuery'
 
 let $ = jquery
 
-console.log($)
-console.log('hello')
+
+$('body').innerHTML += '<br><p>YO</p>';
+console.log('from index.js')
