@@ -1,2 +1,6 @@
-let x = document.querySelector('#target');
-x.innerHTML = "hiii"
+import jQuery from 'jQuery'
+
+let $ = jquery
+
+console.log($)
+console.log('hello')

@@ -26,14 +26,16 @@ module.exports = {
    plugins: [
       new webpack.HotModuleReplacementPlugin(), // Enable HMR
       new HtmlWebpackPlugin({
-      title: 'quick'
+      title: 'quick',
+      hash: true,
+      template: './src/index.html'
     }),
      new HtmlWebpackExternalsPlugin({
        externals: [
           {
             module: 'jquery',
             entry: 'dist/jquery.min.js',
-            global: 'jQuery',
+            global: 'jQuery'
           }
         ]
      })
