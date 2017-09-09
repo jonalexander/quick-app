@@ -19,7 +19,8 @@ module.exports = {
 
   devServer: {
     hot: true,
-    contentBase: './dist',
+    contentBase: './src',
+    watchContentBase: true,
     publicPath: '/'
    },
 

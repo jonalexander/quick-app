@@ -1,7 +1,5 @@
 import jQuery from 'jQuery'
 
-let $ = jquery
+let $ = jQuery
 
-
-$('body').innerHTML += '<br><p>YO</p>';
-console.log('from index.js')
+$('body').append('<h1>yo</h1>')
