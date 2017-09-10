@@ -9,9 +9,9 @@ module.exports = {
     index: ['./src/index.js', './src/styles/app.scss']
   },
   output: {
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
-      filename: 'bundle.js'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+    filename: 'bundle.js'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -20,7 +20,6 @@ module.exports = {
     watchContentBase: true,
     publicPath: '/'
    },
-
    plugins: [
      new ExtractTextPlugin({ // define where to save the file
       filename: 'dist/styles.bundle.css',
@@ -40,19 +39,16 @@ module.exports = {
      })
    ],
   module: {
-    rules: [
-      { test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
-        }
-      }, {
-        test: /\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
-      },
-    ]
+    rules: [{
+      test: /\.js$/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'babel-loader',
+        options: { presets: ['env'] }
+      }
+    }, {
+      test: /\.(sass|scss)$/,
+      loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+    }]
   }
 };
