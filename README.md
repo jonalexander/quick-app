@@ -1,11 +1,10 @@
 # quick-app
 
-barebones skeleton to experiment with js on a static html page.
-includes hot reloading.
+a simple boilerplate i built for my students to help them quickly build web applications. supports SASS & ES6+.
 
+## setup
 ```
 clone
 npm install
 npm start
-node v8.1.3
 ```
